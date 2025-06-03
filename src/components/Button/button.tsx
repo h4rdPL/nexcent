@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 type ButtonProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
 const StyledButton = styled.button`
@@ -13,6 +14,6 @@ const StyledButton = styled.button`
   cursor: pointer;
 `;
 
-export const Button: React.FC<ButtonProps> = ({ children }) => {
-  return <StyledButton>{children}</StyledButton>;
+export const Button: React.FC<ButtonProps> = ({ children, className }) => {
+  return <StyledButton className={className}>{children}</StyledButton>;
 };
