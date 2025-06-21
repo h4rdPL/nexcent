@@ -6,6 +6,7 @@ import company3 from "../../assets/company-3.svg";
 import company4 from "../../assets/company-4.svg";
 import company5 from "../../assets/company-5.svg";
 import company6 from "../../assets/company-6.svg";
+import { MoveRight } from "lucide-react";
 const Wrapper = styled.div`
   display: flex;
   gap: 2rem;
@@ -49,6 +50,10 @@ const Heading = styled.h2`
 `;
 
 const StyledParagraph = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   color: ${({ theme }) => theme.colors.brand};
   font-weight: bold;
 `;
@@ -95,7 +100,9 @@ export const Customer = () => {
           {companies.map((company, index) => (
             <img key={index} src={company} alt={`company-${index + 1}`} />
           ))}
-          <StyledParagraph>Meet all customer - </StyledParagraph>
+          <StyledParagraph>
+            Meet all customer <MoveRight />
+          </StyledParagraph>
         </CompanyWrapper>
       </InsideCompanyWrapper>
     </Wrapper>

@@ -5,6 +5,7 @@ import instagram from "../../assets/instagram.svg";
 import dribble from "../../assets/dribbble.svg";
 import twitter from "../../assets/twitter.svg";
 import youtube from "../../assets/youtube.svg";
+import { Send } from "lucide-react";
 
 const Wrapper = styled.div`
   display: flex;
@@ -92,14 +93,31 @@ const LinkSection = styled.div`
   }
 `;
 
+const EmailWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+`;
+
 const EmailInput = styled.input`
-  padding: 0.75rem;
+  padding: 0.75rem 2.5rem 0.75rem 0.75rem;
   border-radius: 6px;
   border: none;
   width: 100%;
-  max-width: 250px;
   font-size: 0.875rem;
-  margin-top: 1rem;
+  background-color: #f0f0f0;
+  color: #333;
+`;
+
+const SendIcon = styled(Send)`
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: #888;
+  cursor: pointer;
 `;
 
 export const Footer = () => {
@@ -146,7 +164,10 @@ export const Footer = () => {
             </LinkSection>
             <LinkSection>
               <h2>Stay up to date</h2>
-              <EmailInput placeholder="Your email address" />
+              <EmailWrapper>
+                <EmailInput placeholder="Your email address" />
+                <SendIcon />
+              </EmailWrapper>
             </LinkSection>
           </FooterLinks>
         </FooterContainer>

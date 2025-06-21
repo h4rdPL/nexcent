@@ -1,3 +1,4 @@
+import { MoveRight } from "lucide-react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -27,9 +28,13 @@ const Paragraph = styled.p`
 const BoxWrapper = styled.div`
   display: flex;
   justify-content: center;
-  gap: 4rem;
   margin-top: 2rem;
   flex-wrap: wrap;
+  gap: 1rem; /* Small gap on mobile */
+
+  @media (min-width: 768px) {
+    gap: 4rem; /* Larger gap on tablet and up */
+  }
 `;
 
 const BlogPost = styled.div`
@@ -37,11 +42,14 @@ const BlogPost = styled.div`
   flex-direction: column;
   gap: 2rem;
   background-color: ${({ theme }) => theme.colors.background};
-  margin-top: 10rem;
   padding: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   text-align: center;
+
+  @media (min-width: 768px) {
+    margin-top: 10rem; /* Only add margin on larger screens */
+  }
 `;
 
 const BlogParagraph = styled.p`
@@ -51,6 +59,10 @@ const BlogParagraph = styled.p`
 `;
 
 const BlogLink = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.brand};
 `;
@@ -69,19 +81,27 @@ export const Marketing = () => {
           <BlogParagraph>
             Creating Streamlined Safeguarding Processes with OneRen
           </BlogParagraph>
-          <BlogLink href="#">Readmore</BlogLink>
+          <BlogLink href="#">
+            Readmore
+            <MoveRight />
+          </BlogLink>
         </BlogPost>
         <BlogPost>
           <BlogParagraph>
             Creating Streamlined Safeguarding Processes with OneRen
           </BlogParagraph>
-          <BlogLink href="#">Readmore</BlogLink>
+          <BlogLink href="#">
+            Readmore
+            <MoveRight />
+          </BlogLink>
         </BlogPost>
         <BlogPost>
           <BlogParagraph>
             Creating Streamlined Safeguarding Processes with OneRen
           </BlogParagraph>
-          <BlogLink href="#">Readmore</BlogLink>
+          <BlogLink href="#">
+            Readmore <MoveRight />
+          </BlogLink>
         </BlogPost>
       </BoxWrapper>
     </Wrapper>

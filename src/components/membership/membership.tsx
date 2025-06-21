@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import member from "../../assets/members.svg";
+import clubs from "../../assets/clubs.svg";
+import booking from "../../assets/booking.svg";
+import payments from "../../assets/payments.svg";
 const Wrapper = styled.div`
   display: flex;
   gap: 8rem;
@@ -55,21 +58,21 @@ export const Membership = () => {
           </div>
         </NumbersWrapper>
         <NumbersWrapper>
-          <img src={member} alt="member" />
+          <img src={clubs} alt="member" />
           <div>
             <h2>2,245,341</h2>
             <p>Members</p>
           </div>
         </NumbersWrapper>
         <NumbersWrapper>
-          <img src={member} alt="member" />
+          <img src={booking} alt="member" />
           <div>
             <h2>2,245,341</h2>
             <p>Members</p>
           </div>
         </NumbersWrapper>
         <NumbersWrapper>
-          <img src={member} alt="member" />
+          <img src={payments} alt="member" />
           <div>
             <h2>2,245,341</h2>
             <p>Members</p>
